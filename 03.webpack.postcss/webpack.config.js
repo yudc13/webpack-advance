@@ -19,6 +19,8 @@ module.exports = {
 					{
 						loader: "css-loader",
 						options: {
+							// 解决@import xxx.css 不被post-css处理的问题
+							// 是的经过@import xxx.css引入的样式再次通过post-css处理
 							importLoaders: 1
 						}
 					},
