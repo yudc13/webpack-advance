@@ -1,0 +1,19 @@
+{
+  "name": "webpack-advance",
+  "version": "1.0.0",
+  "description": "webpack5 学习",
+  "main": "index.js",
+  "scripts": {
+    "base": "webpack --config ./01.base/webpack.config.js"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "author": "yuta",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.69.1",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4"
+  }
+}
