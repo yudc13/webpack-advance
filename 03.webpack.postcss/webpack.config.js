@@ -24,13 +24,13 @@ module.exports = {
 					},
 					{
 						loader: "postcss-loader",
-						options: {
-							postcssOptions: {
-								plugins: [
-									require('autoprefixer')
-								]
-							}
-						}
+						// options: {
+						// 	postcssOptions: {
+						// 		plugins: [
+						// 			require('autoprefixer')
+						// 		]
+						// 	}
+						// }
 					},
 				]
 			},
@@ -48,13 +48,13 @@ module.exports = {
 					},
 					{
 						loader: "postcss-loader",
-						options: {
-							postcssOptions: {
-								plugins: [
-									require('autoprefixer')
-								]
-							}
-						}
+						// options: {
+						// 	postcssOptions: {
+						// 		plugins: [
+						// 			require('autoprefixer')
+						// 		]
+						// 	}
+						// }
 					},
 					{
 						loader: "less-loader"
