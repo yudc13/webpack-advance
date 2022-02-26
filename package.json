@@ -4,7 +4,8 @@
   "description": "webpack5 学习",
   "main": "index.js",
   "scripts": {
-    "base": "webpack --config 01.webpack.entry/webpack.config.js"
+    "entry": "webpack --config 01.webpack.entry/webpack.config.js",
+    "style": "webpack --config 02.webpack.css/webpack.config.js"
   },
   "keywords": [
     "webpack"
@@ -12,6 +13,10 @@
   "author": "yuta",
   "license": "ISC",
   "devDependencies": {
+    "css-loader": "^6.6.0",
+    "less": "^4.1.2",
+    "less-loader": "^10.2.0",
+    "style-loader": "^3.3.1",
     "webpack": "^5.69.1",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.7.4"
