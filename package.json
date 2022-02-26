@@ -4,7 +4,7 @@
   "description": "webpack5 学习",
   "main": "index.js",
   "scripts": {
-    "base": "webpack --config ./01.base/webpack.config.js"
+    "base": "webpack --config 01.webpack.entry/webpack.config.js"
   },
   "keywords": [
     "webpack"
