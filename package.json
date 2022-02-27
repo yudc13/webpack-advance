@@ -8,7 +8,8 @@
     "style": "webpack --config 02.webpack.css/webpack.config.js",
     "postcss": "webpack --config 03.webpack.postcss/webpack.config.js",
     "plugin": "webpack --config 04.webpack.plugin/webpack.config.js",
-    "sourcemap": "webpack --config 05.webpack.sourcemap/webpack.config.js"
+    "sourcemap": "webpack --config 05.webpack.sourcemap/webpack.config.js",
+    "babel": "webpack --config 06.webpack.babel/webpack.config.js"
   },
   "keywords": [
     "webpack"
@@ -28,8 +29,12 @@
     "postcss-loader": "^6.2.1",
     "postcss-preset-env": "^7.4.1",
     "style-loader": "^3.3.1",
+    "ts-loader": "^9.2.6",
     "webpack": "^5.69.1",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.7.4"
+  },
+  "dependencies": {
+    "core-js": "^3.21.1"
   }
 }
