@@ -33,9 +33,12 @@ module.exports = {
 			},
 			{
 				test: /.ts$/,
+				exclude: /node_modules/,
 				use: [
 					{
-						loader: "ts-loader"
+						// 依赖typescript
+						// loader: "ts-loader" // ts语法有错误 编译不通过
+						loader: "babel-loader", // 也可以转换ts代码 需要配合@babel/preset-typescript
 					}
 				]
 			}

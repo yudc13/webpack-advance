@@ -4,12 +4,13 @@
   "description": "webpack5 学习",
   "main": "index.js",
   "scripts": {
+    "check": "tsc --noEmit",
     "entry": "webpack --config 01.webpack.entry/webpack.config.js",
     "style": "webpack --config 02.webpack.css/webpack.config.js",
     "postcss": "webpack --config 03.webpack.postcss/webpack.config.js",
     "plugin": "webpack --config 04.webpack.plugin/webpack.config.js",
     "sourcemap": "webpack --config 05.webpack.sourcemap/webpack.config.js",
-    "babel": "webpack --config 06.webpack.babel/webpack.config.js"
+    "babel": "npm run check & webpack --config 06.webpack.babel/webpack.config.js"
   },
   "keywords": [
     "webpack"
@@ -19,6 +20,7 @@
   "devDependencies": {
     "@babel/core": "^7.17.5",
     "@babel/preset-env": "^7.16.11",
+    "@babel/preset-typescript": "^7.16.7",
     "autoprefixer": "^10.4.2",
     "babel-loader": "^8.2.3",
     "css-loader": "^6.6.0",
