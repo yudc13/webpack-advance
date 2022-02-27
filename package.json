@@ -6,7 +6,8 @@
   "scripts": {
     "entry": "webpack --config 01.webpack.entry/webpack.config.js",
     "style": "webpack --config 02.webpack.css/webpack.config.js",
-    "postcss": "webpack --config 03.webpack.postcss/webpack.config.js"
+    "postcss": "webpack --config 03.webpack.postcss/webpack.config.js",
+    "plugin": "webpack --config 04.webpack.plugin/webpack.config.js"
   },
   "keywords": [
     "webpack"
@@ -16,6 +17,7 @@
   "devDependencies": {
     "autoprefixer": "^10.4.2",
     "css-loader": "^6.6.0",
+    "html-webpack-plugin": "^5.5.0",
     "less": "^4.1.2",
     "less-loader": "^10.2.0",
     "postcss": "^8.4.7",
