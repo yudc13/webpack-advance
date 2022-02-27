@@ -11,6 +11,21 @@ module.exports = {
 		path: path.resolve(__dirname, './dist'),
 		filename: "main.js",
 	},
+	module: {
+		rules: [
+			{
+				test: /.js$/,
+				use: [
+					{
+						loader: "babel-loader",
+						options: {
+							presets: ['@babel/preset-env']
+						}
+					}
+				]
+			}
+		]
+	},
 	plugins: [
 		new HtmlWebpackPlugin({
 			title: "Webpack Sourcemap",
