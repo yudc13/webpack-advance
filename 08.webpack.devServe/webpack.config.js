@@ -1,24 +1,32 @@
 const path = require('path')
 const { DefinePlugin } = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
+
 
 module.exports = {
   mode: 'development',
+  target: 'web',
   devtool: 'source-map',
-  entry: path.resolve(__dirname, './src/index.js'),
+  entry: {
+    app: path.resolve(__dirname, './src/index.js')
+  },
   output: {
     // path 属性必须是一个绝对路径
     path: path.resolve(__dirname, './dist'),
-    filename: 'main.js'
+    filename: '[name].js'
   },
   module: {
     rules: [
       {
-        test: /.js$/,
+        test: /.jsx?$/,
         exclude: /node_modules/,
         use: [
           {
-            loader: 'babel-loader'
+            loader: 'babel-loader',
+            options: {
+              plugins: [require.resolve('react-refresh/babel')]
+            }
             // options: {
             // 	// preset 其实就是插件(plugins)的集合
             // 	presets: [
@@ -28,10 +36,10 @@ module.exports = {
             // 		}]
             // 	]
             // }
-          },
-          {
-            loader: 'eslint-loader'
           }
+          // {
+          //   loader: 'eslint-loader'
+          // }
         ]
       },
       {
@@ -49,12 +57,16 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Webpack DevServe',
+      title: 'Webpack Babel',
       template: path.resolve(__dirname, './index.html')
     }),
     // 全局常量
     new DefinePlugin({
       BASE_URL: JSON.stringify('./')
-    })
-  ]
+    }),
+    new ReactRefreshWebpackPlugin()
+  ],
+  devServer: {
+    hot: true
+  }
 }

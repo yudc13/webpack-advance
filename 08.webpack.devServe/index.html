@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+<div id='root'></div>
+<h1 id='text'></h1>
+<button id='btn'>+</button>
+<script type='application/javascript'>
+  let count = 1
+  const h1 = document.getElementById('text')
+  const btn = document.getElementById('btn')
+  h1.innerText = count + ''
+  btn.addEventListener('click', function() {
+
+    h1.innerText = ++count + ''
+  })
+</script>
+</body>
+</html>

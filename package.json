@@ -11,7 +11,8 @@
     "plugin": "webpack --config 04.webpack.plugin/webpack.config.js",
     "sourcemap": "webpack --config 05.webpack.sourcemap/webpack.config.js",
     "babel": "npm run check & webpack --config 06.webpack.babel/webpack.config.js",
-    "eslint": "webpack --config 07.webpack.eslint/webpack.config.js"
+    "eslint": "webpack --config 07.webpack.eslint/webpack.config.js",
+    "serve": "webpack-dev-server --config 08.webpack.devServe/webpack.config.js"
   },
   "keywords": [
     "webpack"
@@ -21,7 +22,9 @@
   "devDependencies": {
     "@babel/core": "^7.17.5",
     "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
     "@babel/preset-typescript": "^7.16.7",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.4",
     "autoprefixer": "^10.4.2",
     "babel-loader": "^8.2.3",
     "css-loader": "^6.6.0",
@@ -37,6 +40,8 @@
     "postcss": "^8.4.7",
     "postcss-loader": "^6.2.1",
     "postcss-preset-env": "^7.4.1",
+    "react-refresh": "^0.11.0",
+    "react-refresh-webpack-plugin": "^0.1.0",
     "style-loader": "^3.3.1",
     "ts-loader": "^9.2.6",
     "webpack": "^5.69.1",
@@ -44,6 +49,8 @@
     "webpack-dev-server": "^4.7.4"
   },
   "dependencies": {
-    "core-js": "^3.21.1"
+    "core-js": "^3.21.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   }
 }

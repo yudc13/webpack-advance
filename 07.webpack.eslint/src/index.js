@@ -1,9 +1,8 @@
-const msg = `this is msg`
 const foo = (name) => {
-  console.log("foo")
+  console.log('foo')
 }
 
-foo("jack")
+foo('jack')
 
 new Promise(resolve => {
   resolve(1)
