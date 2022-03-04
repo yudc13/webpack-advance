@@ -13,7 +13,8 @@
     "babel": "npm run check & webpack --config 06.webpack.babel/webpack.config.js",
     "eslint": "webpack --config 07.webpack.eslint/webpack.config.js",
     "serve": "webpack-dev-server --config 08.webpack.devServe/webpack.config.js",
-    "publicPath": "webpack-dev-server --config 09.webpack.publicPath/webpack.config.js"
+    "publicPath": "webpack-dev-server --config 09.webpack.publicPath/webpack.config.js",
+    "env": "webpack --config 10.webpack.env/config/webpack.common.js --env development"
   },
   "keywords": [
     "webpack"
