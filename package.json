@@ -14,7 +14,8 @@
     "eslint": "webpack --config 07.webpack.eslint/webpack.config.js",
     "serve": "webpack-dev-server --config 08.webpack.devServe/webpack.config.js",
     "publicPath": "webpack-dev-server --config 09.webpack.publicPath/webpack.config.js",
-    "env": "webpack --config 10.webpack.env/config/webpack.common.js --env development"
+    "env": "webpack --config 10.webpack.env/config/webpack.common.js --env development",
+    "splitChunk": "webpack --config 11.webpack.splitChunk/webpack.config.js"
   },
   "keywords": [
     "webpack"
