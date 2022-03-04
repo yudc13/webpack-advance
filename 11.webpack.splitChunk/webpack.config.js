@@ -8,16 +8,20 @@ module.exports = {
   mode: 'development',
   target: 'web',
   devtool: 'source-map',
+  // entry: {
+  //   main: {
+  //     import: path.resolve(__dirname, './src/index.js'),
+  //     dependOn: 'utils'
+  //   },
+  //   user: {
+  //     import: path.resolve(__dirname, './src/user.js'),
+  //     dependOn: 'utils'
+  //   },
+  //   utils: path.resolve(__dirname, './src/utils.js')
+  // },
   entry: {
-    main: {
-      import: path.resolve(__dirname, './src/index.js'),
-      dependOn: 'utils'
-    },
-    user: {
-      import: path.resolve(__dirname, './src/user.js'),
-      dependOn: 'utils'
-    },
-    utils: path.resolve(__dirname, './src/utils.js')
+    main: path.resolve(__dirname, './src/index.js'),
+    user: path.resolve(__dirname, './src/user.js')
   },
   output: {
     // path 属性必须是一个绝对路径
@@ -93,6 +97,28 @@ module.exports = {
     static: {
       directory: path.join(__dirname, 'assets'),
       publicPath: '/serve-public-path-url'
+    }
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+      minSize: 1,
+      // maxSize: 0,
+      minChunks: 1,
+      cacheGroups: {
+        vendors: {
+          test: /[\\/]node_modules[\\/]/,
+          priority: 10
+        },
+        default: {
+          minChunks: 2,
+          filename: 'js/common_[id].js'
+        }
+        // utils: {
+        //   test: /utils/,
+        //   filename: 'js/[id]_utils.js'
+        // }
+      }
     }
   }
 }
