@@ -27,6 +27,7 @@ module.exports = {
     // path 属性必须是一个绝对路径
     path: path.resolve(__dirname, './dist'),
     filename: 'js/[name].js',
+    chunkFilename: '[name].chunk.js',
     clean: true
     // 资源的路径：output,publicPath + output.filename
     // publicPath: '/'
