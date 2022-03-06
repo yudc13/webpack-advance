@@ -28,9 +28,12 @@ module.exports = {
     path: path.resolve(__dirname, './dist'),
     filename: 'js/[name].js',
     chunkFilename: '[name].chunk.js',
-    clean: true
+    clean: true,
     // 资源的路径：output,publicPath + output.filename
-    // publicPath: '/'
+    publicPath: './'
+  },
+  externals: {
+    dayjs: JSON.stringify('dayjs')
   },
   module: {
     rules: [
@@ -94,32 +97,32 @@ module.exports = {
     // new ReactRefreshWebpackPlugin()
   ],
   devServer: {
-    hot: true,
-    static: {
-      directory: path.join(__dirname, 'assets'),
-      publicPath: '/serve-public-path-url'
-    }
-  },
-  optimization: {
-    splitChunks: {
-      chunks: 'all',
-      minSize: 1,
-      // maxSize: 0,
-      minChunks: 1,
-      cacheGroups: {
-        vendors: {
-          test: /[\\/]node_modules[\\/]/,
-          priority: 10
-        },
-        default: {
-          minChunks: 2,
-          filename: 'js/common_[id].js'
-        }
-        // utils: {
-        //   test: /utils/,
-        //   filename: 'js/[id]_utils.js'
-        // }
-      }
-    }
+    hot: true
+    // static: {
+    //   directory: path.join(__dirname, 'assets'),
+    //   publicPath: '/serve-public-path-url'
+    // }
   }
+  // optimization: {
+  //   splitChunks: {
+  //     chunks: 'all',
+  //     minSize: 1,
+  //     // maxSize: 0,
+  //     minChunks: 1,
+  //     cacheGroups: {
+  //       vendors: {
+  //         test: /[\\/]node_modules[\\/]/,
+  //         priority: 10
+  //       },
+  //       default: {
+  //         minChunks: 2,
+  //         filename: 'js/common_[id].js'
+  //       }
+  //       // utils: {
+  //       //   test: /utils/,
+  //       //   filename: 'js/[id]_utils.js'
+  //       // }
+  //     }
+  //   }
+  // }
 }
